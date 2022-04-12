@@ -3,13 +3,17 @@ name: test
 on:
   push:
     branches:
-      - master
+      - release
+      - develop
 
   pull_request:
     branches:
-      - master
+      - release
+      - develop
   workflow_dispatch:
-
+    branches:
+      -  release
+      - develop
 
 jobs:
   build:
