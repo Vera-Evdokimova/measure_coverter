@@ -1,3 +1,15 @@
+def main():
+    menu = {
+        'mile': convert_mile,
+        'inch': convert_inch,
+        'yard': convert_yard
+    }
+    while True:
+        cmd = input(f"Выберите единицы измерения для перевода из {list(menu.keys())}: ")
+        if cmd in menu.keys():
+            print(menu[cmd]())
+
+
 def convert_mile():
     return int(input("Введите колличество миль: ")) * 1.609
 
@@ -11,6 +23,4 @@ def convert_yard():
 
 
 if __name__ == '__main__':
-    print("Километров в милях: "f"{convert_mile()}")
-    print("Милиметров в дюймах: "f"{convert_inch()}")
-    print("Метров в ярдах: "f"{convert_inch()}")
+    main()
