@@ -27,4 +27,4 @@ jobs:
           python-version: '3.9'
       - name: Test
         run: |
-          python test.py
+          python tests.py
